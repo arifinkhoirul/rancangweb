@@ -120,8 +120,10 @@
                                         <i class="bi bi-trophy"></i>
                                     </div>
                                     <div class="metric-content">
-                                        <span class="metric-number">{{ $dataMainCardYear->number }}</span>
-                                        <span class="metric-label">{{ $dataMainCardYear->title }}</span>
+                                        @if ($dataMainCardYear)
+                                            <span class="metric-number">{{ $dataMainCardYear->number }}</span>
+                                            <span class="metric-label">{{ $dataMainCardYear->title }}</span>
+                                        @endif
                                     </div>
                                 </div>
                                 <div class="metric-item">
@@ -129,8 +131,10 @@
                                         <i class="bi bi-people"></i>
                                     </div>
                                     <div class="metric-content">
-                                        <span class="metric-number">{{ $dataMainCardClient->number }}</span>
-                                        <span class="metric-label">{{ $dataMainCardClient->title }}</span>
+                                        @if ($dataMainCardClient)
+                                            <span class="metric-number">{{ $dataMainCardClient->number }}</span>
+                                            <span class="metric-label">{{ $dataMainCardClient->title }}</span>
+                                        @endif
                                     </div>
                                 </div>
                                 <div class="metric-item">
@@ -138,8 +142,10 @@
                                         <i class="bi bi-globe"></i>
                                     </div>
                                     <div class="metric-content">
-                                        <span class="metric-number">{{ $dataMainCardPositive->number }}%</span>
-                                        <span class="metric-label">{{ $dataMainCardPositive->title }}</span>
+                                        @if ($dataMainCardClient)
+                                            <span class="metric-number">{{ $dataMainCardPositive->number }}%</span>
+                                            <span class="metric-label">{{ $dataMainCardPositive->title }}</span>
+                                        @endif
                                     </div>
                                 </div>
                             </div>
@@ -788,16 +794,19 @@
                             </div>
                             <div class="plan-features">
                                 <ul>
-                                    @foreach ($dataPriceStarter->features as $dataStarter)
-                                        @if ($dataStarter->status === 'check')
-                                            <li><i class="bi bi-check-circle-fill"></i> {{ $dataStarter->feature }}
-                                            </li>
-                                        @else
-                                            <li class="disabled"><i class="bi bi-x-circle-fill"></i>
-                                                {{ $dataStarter->feature }}
-                                            </li>
-                                        @endif
-                                    @endforeach
+                                    @if ($dataPriceStarter)
+                                        @foreach ($dataPriceStarter->features as $dataStarter)
+                                            @if ($dataStarter->status === 'check')
+                                                <li><i class="bi bi-check-circle-fill"></i>
+                                                    {{ $dataStarter->feature }}
+                                                </li>
+                                            @else
+                                                <li class="disabled"><i class="bi bi-x-circle-fill"></i>
+                                                    {{ $dataStarter->feature }}
+                                                </li>
+                                            @endif
+                                        @endforeach
+                                    @endif
                                 </ul>
                             </div>
                             <div class="plan-cta">
