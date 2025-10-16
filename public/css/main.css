@@ -1408,6 +1408,42 @@ section,
   margin: 0;
 }
 
+
+.service-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.service-tag {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #4e54c8; 
+    color: #fff;
+    padding: 0.4rem 1rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-bottom-left-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    z-index: 2;
+}
+
+/* Berbayar */
+.service-paid .service-tag {
+    background: #234C6A;
+}
+
+/* Gratis */
+.service-free .service-tag {
+    background: #234C6A;
+}
+
+
+
+
+
+
+
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/

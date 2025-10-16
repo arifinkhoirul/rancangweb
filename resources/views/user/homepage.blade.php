@@ -4,12 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Index - Landio Bootstrap css</title>
+    <title>Rancang Web</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
 
     <!-- Favicons -->
-    <link href="{{ asset('image/favicon.png') }}" rel="icon">
+    <link href="{{ asset('image/logo/logo-rancangweb-ico.ico') }}" rel="icon">
     <link href="{{ asset('image/apple-touch-icon.png') }}" rel="apple-touch-icon">
 
     <!-- Fonts -->
@@ -35,6 +35,9 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-D65NP3ZE5F"></script>
 
@@ -46,20 +49,20 @@
         <div
             class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
-            <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-                <!-- Uncomment the line below if you also wish to use an image logo -->
-                <!-- <img src="assets/img/logo.webp" alt=""> -->
-                <h1 class="sitename">RancangWeb</h1>
+            <a href="/" class="logo d-flex align-items-center me-auto me-xl-0">
+                <img src="{{ asset('image/logo/logo-rancangweb.jpg') }}" alt="" class="img-fluid w-10"
+                    style="max-height: 40px;">
             </a>
+
 
             <nav id="navmenu" class="navmenu">
                 <ul>
                     <li><a href="#hero" class="active">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#features">Features</a></li>
+                    <li><a href="#about">About us</a></li>
                     <li><a href="#services">Services</a></li>
+                    <li><a href="#features">Features</a></li>
                     <li><a href="#pricing">Pricing</a></li>
-                    <li class="dropdown"><a href="#"><span>Dropdown</span> <i
+                    {{-- <li class="dropdown"><a href="#"><span>Dropdown</span> <i
                                 class="bi bi-chevron-down toggle-dropdown"></i></a>
                         <ul>
                             <li><a href="#">Dropdown 1</a></li>
@@ -77,7 +80,7 @@
                             <li><a href="#">Dropdown 3</a></li>
                             <li><a href="#">Dropdown 4</a></li>
                         </ul>
-                    </li>
+                    </li> --}}
                     <li><a href="#contact">Contact</a></li>
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -101,17 +104,17 @@
                         <div class="hero-content text-center">
                             <div class="hero-badge" data-aos="fade-down" data-aos-delay="300">
                                 <i class="bi bi-star-fill"></i>
-                                <span>Award Winning Agency</span>
+                                <span>Solusi Digital untuk Kebutuhan Anda</span>
                             </div>
-                            <h1 class="hero-title" data-aos="fade-up" data-aos-delay="400">Transforming Ideas Into
-                                Digital Reality</h1>
-                            <p class="hero-description" data-aos="fade-up" data-aos-delay="500">Lorem ipsum dolor sit
-                                amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
-                                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                            <h1 class="hero-title" data-aos="fade-up" data-aos-delay="400">Tingkatkan Kredibilitas Lewat
+                                Website Modern dan Responsif</h1>
+                            <p class="hero-description" data-aos="fade-up" data-aos-delay="500">Di Rancang Web, kami
+                                membantu Anda memiliki landing page dan sistem admin yang dirancang dinamis, cepat,
+                                serta mudah disesuaikan dengan identitas dan tujuan Anda.</p>
 
                             <div class="hero-actions" data-aos="fade-up" data-aos-delay="600">
-                                <a href="#about" class="btn-primary">Get Started Today</a>
-                                <a href="#portfolio" class="btn-outline">View Our Work</a>
+                                <a href="#about" class="btn-primary">Konsultasi Sekarang</a>
+                                <a href="#portfolio" class="btn-outline">Portfolio Kami</a>
                             </div>
 
                             <div class="hero-metrics" data-aos="fade-up" data-aos-delay="700">
@@ -172,8 +175,8 @@
                                     alt="Corporate office environment" class="img-fluid">
                                 <div class="experience-badge">
                                     <div class="badge-content">
-                                        <span class="years">15+</span>
-                                        <span class="text">Years of Excellence</span>
+                                        <span class="years">3+</span>
+                                        <span class="text">Years of Experience</span>
                                     </div>
                                 </div>
                             </div>
@@ -190,10 +193,11 @@
                         <div class="content-section">
                             <div class="section-intro">
                                 <div class="company-badge">WHO WE ARE</div>
-                                <h2>Building tomorrow's solutions with proven expertise and innovation</h2>
-                                <p class="intro-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                                    accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo
-                                    inventore veritatis et quasi architecto beatae vitae dicta sunt.</p>
+                                <h2>Merancang Website yang Tepat untuk Setiap Kebutuhan</h2>
+                                <p class="intro-text">Rancang Web hadir untuk membantu siapa pun yang ingin punya
+                                    website fungsional dan mudah dikelola.
+                                    Kami percaya bahwa tampilan yang baik dan sistem yang rapi bisa membantu Anda lebih
+                                    percaya diri di dunia digital.</p>
                             </div>
 
                             <div class="achievement-list">
@@ -220,11 +224,13 @@
                             </div>
 
                             <div class="action-section">
-                                <a href="#" class="btn btn-primary">Learn More About Us</a>
-                                <div class="contact-info">
-                                    <span class="contact-label">Call us directly:</span>
+                                <a href="#contact" class="btn btn-primary">
+                                    <i class="bi bi-envelope-fill me-2"></i> Hubungi Kami
+                                </a>
+                                {{-- <div class="contact-info">
+                                    <span class="contact-label">Hubungi kami langsung:</span>
                                     <strong class="phone-number">+1 (555) 234-5678</strong>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     </div>
@@ -270,9 +276,7 @@
             <!-- Section Title -->
             <div class="container section-title" data-aos="fade-up">
                 <h2>Services</h2>
-                <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit. Sed ut
-                    perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem
-                    aperiam</p>
+                <p>Kami bantu wujudkan website yang cepat, menarik, dan mudah dikelola.</p>
             </div><!-- End Section Title -->
 
             <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -286,21 +290,21 @@
                                 <div class="service-icon-large">
                                     <i class="bi bi-rocket-takeoff"></i>
                                 </div>
-                                <h3>Automated Workflows</h3>
-                                <p>Streamline your business processes with intelligent automation that saves time and
-                                    reduces human error. Perfect for scaling teams.</p>
+                                <h3>Website Landing Page + Admin</h3>
+                                <p>Website dinamis dengan halaman admin yang memudahkan Anda mengelola konten.
+                                    Cocok untuk personal, brand, atau usaha yang ingin tampil profesional.</p>
                                 <div class="feature-highlights">
                                     <div class="highlight-item">
                                         <i class="bi bi-check-circle-fill"></i>
-                                        <span>24/7 Processing</span>
+                                        <span>Tampilan modern dan responsif</span>
                                     </div>
                                     <div class="highlight-item">
                                         <i class="bi bi-check-circle-fill"></i>
-                                        <span>Smart Analytics</span>
+                                        <span>Sistem admin mudah digunakan</span>
                                     </div>
                                     <div class="highlight-item">
                                         <i class="bi bi-check-circle-fill"></i>
-                                        <span>Easy Integration</span>
+                                        <span>Mudah dikembangkan sesuai kebutuhan</span>
                                     </div>
                                 </div>
                                 <a href="service-details.html" class="btn-primary">Get Started Free</a>
@@ -311,13 +315,16 @@
                             <div class="row g-4">
 
                                 <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
-                                    <div class="service-card">
+                                    <div class="service-card service-paid">
+                                        <div class="service-tag">Berbayar</div>
                                         <div class="service-icon">
-                                            <i class="bi bi-shield-check"></i>
+                                            <i class="bi bi-tools"></i>
                                         </div>
-                                        <h4>Maintanance</h4>
-                                        <p>Enterprise-grade security measures to protect your data and maintain
-                                            compliance standards.</p>
+                                        <h4>Maintenance & Update</h4>
+                                        <p>Kami bantu menjaga dan mengembangkan website Anda agar tetap stabil, cepat,
+                                            dan sesuai kebutuhan.
+                                            Mulai dari pembaruan kecil sampai penambahan halaman atau fitur baru.
+                                        </p>
                                         <a href="service-details.html" class="service-link">
                                             <span>Learn More</span>
                                             <i class="bi bi-arrow-right"></i>
@@ -326,19 +333,23 @@
                                 </div>
 
                                 <div class="col-md-6" data-aos="fade-up" data-aos-delay="250">
-                                    <div class="service-card">
+                                    <div class="service-card service-free">
+                                        <div class="service-tag">Gratis</div>
                                         <div class="service-icon">
-                                            <i class="bi bi-graph-up"></i>
+                                            <i class="bi bi-chat-dots-fill"></i>
                                         </div>
                                         <h4>Customer Service</h4>
-                                        <p>Real-time insights and comprehensive reporting to optimize your business
-                                            performance.</p>
+                                        <p>Kami siap membantu kapan pun Anda butuh bantuan terkait website Anda.
+                                            Mulai dari update konten, konsultasi teknis, hingga panduan penggunaan
+                                            dengan cara yang mudah dipahami.
+                                        </p>
                                         <a href="service-details.html" class="service-link">
                                             <span>Learn More</span>
                                             <i class="bi bi-arrow-right"></i>
                                         </a>
                                     </div>
                                 </div>
+
 
                                 <!-- <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
     <div class="service-card">
@@ -507,9 +518,7 @@
             <!-- Section Title -->
             <div class="container section-title" data-aos="fade-up">
                 <h2>Features</h2>
-                <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit. Sed ut
-                    perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem
-                    aperiam</p>
+                <p>Fitur unggulan untuk membuat website Anda menarik dan mudah digunakan.</p>
             </div><!-- End Section Title -->
 
             <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -518,9 +527,10 @@
 
                     <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right" data-aos-delay="200">
                         <div class="features-content">
-                            <h2>Voluptatum deleniti atque corrupti quos dolores</h2>
-                            <p class="lead">Et harum quidem rerum facilis est et expedita distinctio. Nam libero
-                                tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus.</p>
+                            <h2>Kenapa Memilih Kami?</h2>
+                            <p class="lead">Kami fokus menghadirkan website yang tidak hanya terlihat menarik, tapi
+                                juga berfungsi optimal dan mudah dikembangkan. Dengan pengalaman dan perhatian pada
+                                detail, setiap proyek kami dirancang untuk memberi hasil terbaik bagi Anda.</p>
                         </div>
                     </div>
 
@@ -537,7 +547,7 @@
 
                     <div class="feature-item" data-aos="zoom-in" data-aos-delay="100">
                         <div class="feature-icon">
-                            <i class="bi bi-lightning-charge"></i>
+                            <i class="bi bi-pencil-square"></i>
                         </div>
                         <div class="feature-content">
                             <h4>Custom Website Dev</h4>
@@ -547,7 +557,7 @@
 
                     <div class="feature-item" data-aos="zoom-in" data-aos-delay="200">
                         <div class="feature-icon">
-                            <i class="bi bi-shield-check"></i>
+                            <i class="bi bi-phone"></i>
                         </div>
                         <div class="feature-content">
                             <h4>Responsice & Fast</h4>
@@ -558,7 +568,7 @@
 
                     <div class="feature-item" data-aos="zoom-in" data-aos-delay="300">
                         <div class="feature-icon">
-                            <i class="bi bi-gem"></i>
+                            <i class="bi bi-search"></i>
                         </div>
                         <div class="feature-content">
                             <h4>SEO Ready</h4>
@@ -569,7 +579,7 @@
 
                     <div class="feature-item" data-aos="zoom-in" data-aos-delay="400">
                         <div class="feature-icon">
-                            <i class="bi bi-rocket-takeoff"></i>
+                            <i class="bi bi-layout-sidebar"></i>
                         </div>
                         <div class="feature-content">
                             <h4>Easy to Manage</h4>
@@ -669,99 +679,315 @@
             <!-- Section Title -->
             <div class="container section-title" data-aos="fade-up">
                 <h2>Testimonials</h2>
-                <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+                <p>Apa kata mereka yang sudah menggunakan layanan kami.</p>
             </div><!-- End Section Title -->
 
             <div class="container" data-aos="fade-up" data-aos-delay="100">
 
+                <!-- Swiper container -->
                 <div class="testimonials-slider-wrapper">
-                    <div class="testimonials-carousel">
+                    <div class="swiper testimonials-carousel">
+                        <div class="swiper-wrapper">
 
-                        <div class="testimonial-card" data-aos="zoom-in" data-aos-delay="200">
-                            <div class="rating">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                            </div>
-                            <blockquote>
-                                "The platform's intuitive design has streamlined our workflow and boosted team
-                                productivity by 40%. The automation features are game-changing."
-                            </blockquote>
-                            <div class="user-profile">
-                                <div class="avatar">
-                                    <img src="assets/img/person/person-f-12.webp" alt="User" class="img-fluid">
+                            <!-- Card 1 -->
+                            <div class="swiper-slide testimonial-card" data-aos="zoom-in" data-aos-delay="200">
+                                <div class="rating">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
                                 </div>
-                                <div class="user-info">
-                                    <h4>Sarah Williams</h4>
-                                    <span class="title">Product Manager</span>
-                                    <div class="company">TechFlow Inc.</div>
+                                <blockquote>
+                                    "The platform's intuitive design has streamlined our workflow and boosted team
+                                    productivity by 40%. The automation features are game-changing."
+                                </blockquote>
+                                <div class="user-profile">
+                                    <div class="avatar">
+                                        <img src="assets/img/person/person-f-12.webp" alt="User"
+                                            class="img-fluid">
+                                    </div>
+                                    <div class="user-info">
+                                        <h4>Sarah Williams</h4>
+                                        <span class="title">Product Manager</span>
+                                        <div class="company">TechFlow Inc.</div>
+                                    </div>
                                 </div>
                             </div>
+
+                            <!-- Card 2 -->
+                            <div class="swiper-slide testimonial-card featured" data-aos="zoom-in"
+                                data-aos-delay="300">
+                                <div class="featured-badge">
+                                    <i class="bi bi-award-fill"></i>
+                                    <span>Top Review</span>
+                                </div>
+                                <div class="rating">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <blockquote>
+                                    "Outstanding customer support and feature-rich platform. The analytics dashboard
+                                    provides incredible insights that have transformed our decision-making process
+                                    completely."
+                                </blockquote>
+                                <div class="user-profile">
+                                    <div class="avatar">
+                                        <img src="{{ asset('image/person/person-m-11.webp') }}" alt="User"
+                                            class="img-fluid">
+                                    </div>
+                                    <div class="user-info">
+                                        <h4>Michael Chen</h4>
+                                        <span class="title">CEO &amp; Founder</span>
+                                        <div class="company">DataDrive Solutions</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 3 -->
+                            <div class="swiper-slide testimonial-card" data-aos="zoom-in" data-aos-delay="400">
+                                <div class="rating">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <blockquote>
+                                    "Seamless integration with our existing tools made the transition effortless. The
+                                    real-time collaboration features have enhanced our remote work capabilities."
+                                </blockquote>
+                                <div class="user-profile">
+                                    <div class="avatar">
+                                        <img src="assets/img/person/person-f-14.webp" alt="User"
+                                            class="img-fluid">
+                                    </div>
+                                    <div class="user-info">
+                                        <h4>Emma Rodriguez</h4>
+                                        <span class="title">Operations Director</span>
+                                        <div class="company">CloudSync Corp</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide testimonial-card" data-aos="zoom-in" data-aos-delay="400">
+                                <div class="rating">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <blockquote>
+                                    "Seamless integration with our existing tools made the transition effortless. The
+                                    real-time collaboration features have enhanced our remote work capabilities."
+                                </blockquote>
+                                <div class="user-profile">
+                                    <div class="avatar">
+                                        <img src="assets/img/person/person-f-14.webp" alt="User"
+                                            class="img-fluid">
+                                    </div>
+                                    <div class="user-info">
+                                        <h4>Emma Rodriguez</h4>
+                                        <span class="title">Operations Director</span>
+                                        <div class="company">CloudSync Corp</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide testimonial-card" data-aos="zoom-in" data-aos-delay="400">
+                                <div class="rating">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <blockquote>
+                                    "Seamless integration with our existing tools made the transition effortless. The
+                                    real-time collaboration features have enhanced our remote work capabilities."
+                                </blockquote>
+                                <div class="user-profile">
+                                    <div class="avatar">
+                                        <img src="assets/img/person/person-f-14.webp" alt="User"
+                                            class="img-fluid">
+                                    </div>
+                                    <div class="user-info">
+                                        <h4>Emma Rodriguez</h4>
+                                        <span class="title">Operations Director</span>
+                                        <div class="company">CloudSync Corp</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide testimonial-card" data-aos="zoom-in" data-aos-delay="400">
+                                <div class="rating">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <blockquote>
+                                    "Seamless integration with our existing tools made the transition effortless. The
+                                    real-time collaboration features have enhanced our remote work capabilities."
+                                </blockquote>
+                                <div class="user-profile">
+                                    <div class="avatar">
+                                        <img src="assets/img/person/person-f-14.webp" alt="User"
+                                            class="img-fluid">
+                                    </div>
+                                    <div class="user-info">
+                                        <h4>Emma Rodriguez</h4>
+                                        <span class="title">Operations Director</span>
+                                        <div class="company">CloudSync Corp</div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
 
-                        <div class="testimonial-card featured" data-aos="zoom-in" data-aos-delay="300">
-                            <div class="featured-badge">
-                                <i class="bi bi-award-fill"></i>
-                                <span>Top Review</span>
-                            </div>
-                            <div class="rating">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                            </div>
-                            <blockquote>
-                                "Outstanding customer support and feature-rich platform. The analytics dashboard
-                                provides incredible insights that have transformed our decision-making process
-                                completely."
-                            </blockquote>
-                            <div class="user-profile">
-                                <div class="avatar">
-                                    <img src="{{ asset('image/person/person-m-11.webp') }}" alt="User"
-                                        class="img-fluid">
-                                </div>
-                                <div class="user-info">
-                                    <h4>Michael Chen</h4>
-                                    <span class="title">CEO &amp; Founder</span>
-                                    <div class="company">DataDrive Solutions</div>
-                                </div>
-                            </div>
+                        <!-- Tombol navigasi pakai Remix Icons -->
+                        <div class="swiper-button-prev custom-arrow">
+
+                        </div>
+                        <div class="swiper-button-next custom-arrow">
+
                         </div>
 
-                        <div class="testimonial-card" data-aos="zoom-in" data-aos-delay="400">
-                            <div class="rating">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                            </div>
-                            <blockquote>
-                                "Seamless integration with our existing tools made the transition effortless. The
-                                real-time collaboration features have enhanced our remote work capabilities."
-                            </blockquote>
-                            <div class="user-profile">
-                                <div class="avatar">
-                                    <img src="assets/img/person/person-f-14.webp" alt="User" class="img-fluid">
-                                </div>
-                                <div class="user-info">
-                                    <h4>Emma Rodriguez</h4>
-                                    <span class="title">Operations Director</span>
-                                    <div class="company">CloudSync Corp</div>
-                                </div>
-                            </div>
-                        </div>
 
                     </div>
-
                 </div>
+
+
+
+
+
+
 
             </div>
 
         </section><!-- /Testimonials Section -->
+
+        <section id="portfolio" class="portfolio section">
+
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>portfolio</h2>
+                <p>Beberapa proyek inspiratif yang telah kami selesaikan.</p>
+            </div><!-- End Section Title -->
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+                <div class="row">
+                    {{-- ? card 1 --}}
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
+                        <!-- Tambahkan data-bs-toggle dan data-bs-target -->
+                        <div class="card shadow-sm border-0 overflow-hidden"
+                            style="padding: 0; border-radius: 12px; transition: all 0.3s ease; cursor: pointer;"
+                            data-bs-toggle="modal" data-bs-target="#portfolioModal1">
+                            <img src="{{ asset('image/portfolio/mc1.jpg') }}" class="card-img-top" alt="..."
+                                style="height: 220px; object-fit: cover;">
+                            <div class="card-body p-4">
+                                <h5 class="card-title mb-2">Karang Taruna</h5>
+                                <p class="card-text text-muted"
+                                    style="
+                            display: -webkit-box;
+                            -webkit-line-clamp: 3;
+                            -webkit-box-orient: vertical;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            min-height: 60px;
+                        ">
+                                    Website Karang Taruna Online adalah platform yang menjadi pusat informasi dan komunikasi bagi generasi muda di wilayah Ujung Harapan. Di sini, pengunjung bisa melihat data remaja, informasi pengurus, agenda kegiatan, serta dokumentasi acara sosial dan budaya. Website ini bertujuan untuk memudahkan partisipasi pemuda dalam kegiatan komunitas, mempererat silaturahmi antarwarga, dan menampilkan berbagai kegiatan kreatif dan positif bagi masyarakat.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {{-- ? card 2 --}}
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
+                        <!-- Tambahkan data-bs-toggle dan data-bs-target -->
+                        <div class="card shadow-sm border-0 overflow-hidden"
+                            style="padding: 0; border-radius: 12px; transition: all 0.3s ease; cursor: pointer;"
+                            data-bs-toggle="modal" data-bs-target="#portfolioModal2">
+                            <img src="{{ asset('image/about/about-3.webp') }}" class="card-img-top" alt="..."
+                                style="height: 220px; object-fit: cover;">
+                            <div class="card-body p-4">
+                                <h5 class="card-title mb-2">Karang Taruna</h5>
+                                <p class="card-text text-muted"
+                                    style="
+                            display: -webkit-box;
+                            -webkit-line-clamp: 3;
+                            -webkit-box-orient: vertical;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            min-height: 60px;
+                        ">
+                                    Some quick example text to build on the card title and make up the bulk of the
+                                    card’s content.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {{-- ? modal card 1--}}
+                <div class="modal fade" id="portfolioModal1" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content border-0 rounded-4 ">
+                            <div class="modal-body position-relative">
+                                <button type="button" class="btn-close position-absolute top-0 end-0" style="margin: 11px"
+                                    data-bs-dismiss="modal" aria-label="Close"></button>
+                                <img src="{{ asset('image/portfolio/mc1.jpg') }}" class="img-fluid rounded mb-3"
+                                    alt="...">
+                                <h4 class="fw-bold mb-2 fs-2">Karang Taruna</h4>
+                                <p class="text-muted"> Website Karang Taruna Online adalah platform yang menjadi pusat informasi dan komunikasi bagi generasi muda di wilayah Ujung Harapan. Di sini, pengunjung bisa melihat data remaja, informasi pengurus, agenda kegiatan, serta dokumentasi acara sosial dan budaya. Website ini bertujuan untuk memudahkan partisipasi pemuda dalam kegiatan komunitas, mempererat silaturahmi antarwarga, dan menampilkan berbagai kegiatan kreatif dan positif bagi masyarakat.</p>
+                                <p class="mt-3 fw-medium">
+                                    Visit Link:
+                                    <a href="https://karangtaruna.online/" target="_blank"
+                                        class="fw-light link-underline link-underline-opacity-0 link-underline-opacity-100-hover text-primary">
+                                        karangtaruna.online
+                                    </a>
+                                </p>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {{-- ? modal card --}}
+                <div class="modal fade" id="portfolioModal2" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content border-0 rounded-4 ">
+                            <div class="modal-body position-relative">
+                                <button type="button" class="btn-close position-absolute top-0 end-0" style="margin: 11px"
+                                    data-bs-dismiss="modal" aria-label="Close"></button>
+                                <img src="{{ asset('image/about/about-3.webp') }}" class="img-fluid rounded mb-3"
+                                    alt="...">
+                                <h4 class="fw-bold mb-2 fs-2">Karang Taruna</h4>
+                                <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
+                                    quo ipsum reprehenderit sed quos totam. Amet, suscipit ratione sequi fugiat
+                                    provident officia, placeat doloremque asperiores velit nobis tempore ipsam!
+                                    Assumenda obcaecati, adipisci enim sit fuga voluptatem deleniti</p>
+                                <p class="mt-3 fw-medium">
+                                    Visit Link:
+                                    <a href="https://karangtaruna.online/" target="_blank"
+                                        class="fw-light link-underline link-underline-opacity-0 link-underline-opacity-100-hover text-primary">
+                                        karangtaruna.online
+                                    </a>
+                                </p>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </section><!-- /portfolio Section -->
 
         <!-- Pricing Section -->
         <section id="pricing" class="pricing section">
@@ -769,7 +995,7 @@
             <!-- Section Title -->
             <div class="container section-title" data-aos="fade-up">
                 <h2>Pricing</h2>
-                <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+                <p>Pilih paket unggulan yang sesuai dengan kebutuhan Anda.</p>
             </div><!-- End Section Title -->
 
             <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -783,7 +1009,7 @@
                                     <i class="bi bi-box"></i>
                                 </div>
                                 <h3>Starter</h3>
-                                <p>For individuals just getting started</p>
+                                <p>Cocok untuk mulai membuat website dengan fitur dasar yang simpel dan cepat</p>
                             </div>
                             <div class="plan-pricing">
                                 <div class="price">
@@ -810,7 +1036,7 @@
                                 </ul>
                             </div>
                             <div class="plan-cta">
-                                <a href="#" class="btn-plan">Choose Plan</a>
+                                <a href="#" class="btn-plan">Dapatkan Sekarang</a>
                             </div>
                         </div>
                     </div><!-- End Basic Plan -->
@@ -824,7 +1050,7 @@
                                     <i class="bi bi-briefcase"></i>
                                 </div>
                                 <h3>Professional</h3>
-                                <p>For small teams and growing businesses</p>
+                                <p>Untuk yang ingin website lebih lengkap, interaktif, dan siap berkembang</p>
                             </div>
                             <div class="plan-pricing">
                                 <div class="price">
@@ -843,7 +1069,7 @@
                                 </ul>
                             </div>
                             <div class="plan-cta">
-                                <a href="#" class="btn-plan">Choose Plan</a>
+                                <a href="#" class="btn-plan">Dapatkan Sekarang</a>
                             </div>
                         </div>
                     </div><!-- End Professional Plan -->
@@ -856,7 +1082,7 @@
                                     <i class="bi bi-building"></i>
                                 </div>
                                 <h3>Enterprise</h3>
-                                <p>For large organizations and corporations</p>
+                                <p>Solusi lengkap dengan fitur lanjutan dan dukungan ekstra untuk website maksimal</p>
                             </div>
                             <div class="plan-pricing">
                                 <div class="price">
@@ -875,7 +1101,7 @@
                                 </ul>
                             </div>
                             <div class="plan-cta">
-                                <a href="#" class="btn-plan">Choose Plan</a>
+                                <a href="#" class="btn-plan">Dapatkan Sekarang</a>
                             </div>
                         </div>
                     </div><!-- End Enterprise Plan -->
@@ -887,131 +1113,82 @@
 
         <!-- Faq Section -->
         <section id="faq" class="faq section">
-
             <div class="container" data-aos="fade-up" data-aos-delay="100">
+                <div class="row">
+                    <!-- Judul Kiri -->
+                    <div class="col-lg-5 col-md-12 mb-4">
+                        <h2 class="faq-title">FREQUENTLY<br>ASKED<br>QUESTIONS</h2>
+                    </div>
 
-                <div class="row justify-content-center">
-                    <div class="col-lg-10">
-
+                    <!-- FAQ Item Kanan -->
+                    <div class="col-lg-7 col-md-12">
                         <div class="faq-container">
 
-                            <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                            <!-- FAQ Item -->
+                            <div class="faq-item">
                                 <div class="question-wrapper">
-                                    <div class="icon-wrapper">
-                                        <i class="bi bi-patch-question"></i>
-                                    </div>
-                                    <div class="content-wrapper">
-                                        <h3 class="question">Consectetur adipiscing elit pellentesque habitant morbi
-                                            tristique?</h3>
-                                        <div class="answer">
-                                            <p>Mauris augue neque gravida in fermentum et sollicitudin ac orci. Cursus
-                                                euismod quis viverra nibh cras pulvinar mattis nunc sed. Sed felis eget
-                                                velit aliquet sagittis id consectetur purus ut.</p>
-                                        </div>
+                                    <h3 class="question">Apa itu Rancang Web?</h3>
+                                    <div class="arrow-wrapper">
+                                        <i class="bi bi-plus-lg"></i>
                                     </div>
                                 </div>
-                            </div><!-- End FAQ Item -->
+                                <div class="answer">
+                                    <p>Rancang Web adalah layanan pembuatan landing page dan admin dinamis yang bikin
+                                        website kamu tampil keren dan mudah diatur.</p>
+                                </div>
+                            </div>
 
-                            <div class="faq-item" data-aos="fade-up" data-aos-delay="250">
+                            <div class="faq-item">
                                 <div class="question-wrapper">
-                                    <div class="icon-wrapper">
-                                        <i class="bi bi-patch-question"></i>
-                                    </div>
-                                    <div class="content-wrapper">
-                                        <h3 class="question">Vulputate sapien nec sagittis aliquam malesuada bibendum
-                                            arcu vitae?</h3>
-                                        <div class="answer">
-                                            <p>Tellus elementum sagittis vitae et leo duis ut diam quam. Sed enim ut sem
-                                                viverra aliquet eget sit amet tellus. Facilisis magna etiam tempor orci
-                                                eu lobortis elementum nibh tellus.</p>
-                                        </div>
+                                    <h3 class="question">Apakah landing page bisa dikustom sesuai keinginan saya?</h3>
+                                    <div class="arrow-wrapper">
+                                        <i class="bi bi-plus-lg"></i>
                                     </div>
                                 </div>
-                            </div><!-- End FAQ Item -->
+                                <div class="answer">
+                                    <p>Tentu! Semua desain bisa disesuaikan dengan warna, font, dan style yang kamu
+                                        suka, supaya website tetap personal dan menarik.</p>
+                                </div>
+                            </div>
 
-                            <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                            <div class="faq-item">
                                 <div class="question-wrapper">
-                                    <div class="icon-wrapper">
-                                        <i class="bi bi-patch-question"></i>
-                                    </div>
-                                    <div class="content-wrapper">
-                                        <h3 class="question">Tempor commodo ullamcorper a lacus vestibulum sed arcu
-                                            non?</h3>
-                                        <div class="answer">
-                                            <p>Imperdiet sed euismod nisi porta lorem mollis aliquam ut porttitor.
-                                                Turpis massa tincidunt dui ut ornare lectus. Auctor augue mauris augue
-                                                neque gravida in fermentum et sollicitudin.</p>
-                                        </div>
+                                    <h3 class="question">Apakah admin panel mudah dipakai?</h3>
+                                    <div class="arrow-wrapper">
+                                        <i class="bi bi-plus-lg"></i>
                                     </div>
                                 </div>
-                            </div><!-- End FAQ Item -->
+                                <div class="answer">
+                                    <p>Ya, admin kami sangat user-friendly, jadi kamu bisa update konten, produk, atau
+                                        info lain tanpa ribet dan tanpa harus jago teknis.</p>
+                                </div>
+                            </div>
 
-                            <div class="faq-item" data-aos="fade-up" data-aos-delay="350">
+                            <div class="faq-item">
                                 <div class="question-wrapper">
-                                    <div class="icon-wrapper">
-                                        <i class="bi bi-patch-question"></i>
-                                    </div>
-                                    <div class="content-wrapper">
-                                        <h3 class="question">Dignissim sodales ut eu sem integer vitae justo eget
-                                            magna?</h3>
-                                        <div class="answer">
-                                            <p>Nunc vel risus commodo viverra maecenas accumsan lacus vel facilisis.
-                                                Vitae elementum curabitur vitae nunc sed velit dignissim sodales ut.
-                                                Ornare massa eget egestas purus viverra accumsan.</p>
-                                        </div>
+                                    <h3 class="question">Berapa lama pembuatan website biasanya?</h3>
+                                    <div class="arrow-wrapper">
+                                        <i class="bi bi-plus-lg"></i>
                                     </div>
                                 </div>
-                            </div><!-- End FAQ Item -->
-
-                            <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
-                                <div class="question-wrapper">
-                                    <div class="icon-wrapper">
-                                        <i class="bi bi-patch-question"></i>
-                                    </div>
-                                    <div class="content-wrapper">
-                                        <h3 class="question">Elementum sagittis vitae et leo duis ut diam quam nulla?
-                                        </h3>
-                                        <div class="answer">
-                                            <p>Vestibulum lorem sed risus ultricies tristique nulla aliquet enim tortor.
-                                                Pharetra pharetra massa massa ultricies mi quis hendrerit dolor magna.
-                                                Eget est lorem ipsum dolor sit amet consectetur.</p>
-                                        </div>
-                                    </div>
+                                <div class="answer">
+                                    <p>Biasanya 3–7 hari kerja untuk landing page standar. Kalau fiturnya lebih
+                                        kompleks, waktunya bisa sedikit lebih lama.</p>
                                 </div>
-                            </div><!-- End FAQ Item -->
-
-                            <div class="faq-item" data-aos="fade-up" data-aos-delay="450">
-                                <div class="question-wrapper">
-                                    <div class="icon-wrapper">
-                                        <i class="bi bi-patch-question"></i>
-                                    </div>
-                                    <div class="content-wrapper">
-                                        <h3 class="question">Bibendum neque egestas congue quisque egestas diam in
-                                            arcu?</h3>
-                                        <div class="answer">
-                                            <p>Fermentum dui faucibus in ornare quam viverra orci sagittis eu. At quis
-                                                risus sed vulputate odio ut enim blandit volutpat. Mattis pellentesque
-                                                id nibh tortor id aliquet lectus proin.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div><!-- End FAQ Item -->
+                            </div>
 
                         </div>
-
                     </div>
                 </div>
-
             </div>
-
-        </section><!-- /Faq Section -->
+        </section>
 
         <!-- Contact Section -->
         <section id="contact" class="contact section light-background">
             <!-- Section Title -->
             <div class="container section-title" data-aos="fade-up">
                 <h2>Contact</h2>
-                <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+                <p>Ada yang ingin ditanyakan? Kontak tim kami sekarang.</p>
             </div><!-- End Section Title -->
 
             <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -1021,8 +1198,9 @@
                             <div class="panel-content">
                                 <div class="info-header">
                                     <h2>Ready to Connect?</h2>
-                                    <p>Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt
-                                        mollit anim id est laborum.</p>
+                                    <p>Punya ide atau pertanyaan? Yuk, ngobrol sama tim Rancang Web! Kami siap bantu,
+                                        kasih saran, dan pastikan semua kebutuhan website kamu terpenuhi dengan mudah.
+                                    </p>
                                 </div>
 
                                 <div class="info-grid">
@@ -1032,7 +1210,7 @@
                                         </div>
                                         <div class="card-content">
                                             <h4>Visit Our Office</h4>
-                                            <p>1247 Central Park West<br>New York, NY 10024</p>
+                                            <p>Bekasi City, Indonesia</p>
                                         </div>
                                     </div>
 
@@ -1042,7 +1220,7 @@
                                         </div>
                                         <div class="card-content">
                                             <h4>Send Us a Message</h4>
-                                            <p>contact@example.com</p>
+                                            <p>rancangweb@gmail.com</p>
                                         </div>
                                     </div>
 
@@ -1056,7 +1234,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="info-card" data-aos="slide-up" data-aos-delay="400">
+                                    {{-- <div class="info-card" data-aos="slide-up" data-aos-delay="400">
                                         <div class="card-icon">
                                             <i class="bi bi-calendar3"></i>
                                         </div>
@@ -1064,7 +1242,7 @@
                                             <h4>Business Hours</h4>
                                             <p>Mon-Fri: 8AM-7PM<br>Weekends: By Appointment</p>
                                         </div>
-                                    </div>
+                                    </div> --}}
                                 </div>
 
                                 <div class="social-section" data-aos="fade-in" data-aos-delay="450">
@@ -1079,7 +1257,7 @@
                                         <a href="#" class="social-icon">
                                             <i class="bi bi-linkedin"></i>
                                         </a>
-                                        <a href="#" class="social-icon">
+                                        <a href="https://www.instagram.com/rancang_web/" class="social-icon">
                                             <i class="bi bi-instagram"></i>
                                         </a>
                                     </div>
@@ -1091,7 +1269,7 @@
                     <div class="col-lg-6" data-aos="slide-left" data-aos-delay="300">
                         <div class="contact-form-wrapper">
                             <div class="form-header">
-                                <h3>Drop Us a Line</h3>
+                                <h3>Hubungi Kami!</h3>
                                 <div class="header-line"></div>
                             </div>
 
@@ -1128,7 +1306,7 @@
                                 </div>
 
                                 <button type="submit" class="submit-btn">
-                                    <span class="btn-text">Send Message</span>
+                                    <span class="btn-text">Kirim Pesan</span>
                                     <span class="btn-icon">
                                         <i class="bi bi-arrow-right"></i>
                                     </span>
@@ -1142,130 +1320,69 @@
 
     </main>
 
-    <footer id="footer" class="footer position-relative light-background">
+    <footer id="footer" class="footer position-relative bg-light pt-4 pt-md-5 ">
 
         <div class="container">
 
             <div class="footer-main" data-aos="fade-up" data-aos-delay="100">
-                <div class="row align-items-start">
+                <div class="row gy-4">
 
-                    <div class="col-lg-5">
-                        <div class="brand-section">
-                            <a href="index.html" class="logo d-flex align-items-center mb-4">
-                                <span class="sitename">Rancang Web</span>
+                    <!-- Brand Section -->
+                    <div class="col-lg-5 col-md-12">
+                        <div class="brand-section pe-lg-5">
+                            <a href="/"
+                                class="logo d-flex align-items-center mb-3 justify-content-center justify-content-lg-start">
+                                <img src="{{ asset('image/logo/logo-rancang web.png') }}" alt="Rancang Web Logo"
+                                    class="img-fluid" style="max-height: 45px;">
                             </a>
-                            <p class="brand-description">Crafting exceptional digital experiences through thoughtful
-                                design and innovative solutions that elevate your brand presence.</p>
 
-                            <div class="contact-info mt-5">
-                                <div class="contact-item">
-                                    <i class="bi bi-geo-alt"></i>
-                                    <span>123 Creative Boulevard, Design District, NY 10012</span>
-                                </div>
-                                <div class="contact-item">
-                                    <i class="bi bi-telephone"></i>
-                                    <span>+1 (555) 987-6543</span>
-                                </div>
-                                <div class="contact-item">
-                                    <i class="bi bi-envelope"></i>
-                                    <span>hello@designstudio.com</span>
-                                </div>
-                            </div>
+                            <p class="brand-description text-muted" style="font-size: 0.95rem;">
+                                Rancang Web menghadirkan solusi pembuatan landing page dinamis dengan desain responsif
+                                dan fitur admin terintegrasi.
+                            </p>
                         </div>
                     </div>
 
-                    <div class="col-lg-7">
+                    <!-- Navigation Section -->
+                    <div class="col-lg-7 col-md-12">
                         <div class="footer-nav-wrapper">
-                            <div class="row">
+                            <div class="row gy-4">
 
-                                <div class="col-6 col-lg-3">
+                                <div class="col-6 col-md-4">
                                     <div class="nav-column">
-                                        <h6>Studio</h6>
-                                        <nav class="footer-nav">
-                                            <a href="#">Our Story</a>
-                                            <a href="#">Design Process</a>
-                                            <a href="#">Portfolio</a>
-                                            <a href="#">Case Studies</a>
-                                            <a href="#">Awards</a>
+                                        <h6 class="fw-bold text-dark mb-3 centering">Services</h6>
+                                        <nav class="footer-nav d-flex flex-column gap-2">
+                                            <a href="#" class="footer-link">Maintenance</a>
+                                            <a href="#" class="footer-link">Consultation</a>
                                         </nav>
                                     </div>
                                 </div>
 
-                                <div class="col-6 col-lg-3">
+                                <div class="col-6 col-md-4">
                                     <div class="nav-column">
-                                        <h6>Services</h6>
-                                        <nav class="footer-nav">
-                                            <a href="#">Brand Identity</a>
-                                            <a href="#">Web Design</a>
-                                            <a href="#">Mobile Apps</a>
-                                            <a href="#">Digital Strategy</a>
-                                            <a href="#">Consultation</a>
+                                        <h6 class="fw-bold text-dark mb-3 centering">Company</h6>
+                                        <nav class="footer-nav d-flex flex-column gap-2">
+                                            <a href="#about" class="footer-link">About Us</a>
+                                            <a href="#portfolio" class="footer-link">Portfolio</a>
+                                            <a href="#services" class="footer-link">Services</a>
+                                            <a href="#features" class="footer-link">Features</a>
+                                            <a href="#" class="footer-link">Contact</a>
                                         </nav>
                                     </div>
                                 </div>
 
-                                <div class="col-6 col-lg-3">
+                                <div class="col-12 col-md-4">
                                     <div class="nav-column">
-                                        <h6>Resources</h6>
-                                        <nav class="footer-nav">
-                                            <a href="#">Design Blog</a>
-                                            <a href="#">Style Guide</a>
-                                            <a href="#">Free Assets</a>
-                                            <a href="#">Tutorials</a>
-                                            <a href="#">Inspiration</a>
-                                        </nav>
+                                        <h6 class="fw-bold text-dark mb-3 centering">Follow Us</h6>
+                                        <div class="d-flex gap-3">
+                                            <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
+                                            <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+                                            <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
+                                            <a href="#" class="social-link"><i class="bi bi-tiktok"></i></a>
+                                        </div>
                                     </div>
                                 </div>
 
-                                <div class="col-6 col-lg-3">
-                                    <div class="nav-column">
-                                        <h6>Connect</h6>
-                                        <nav class="footer-nav">
-                                            <a href="#">Start Project</a>
-                                            <a href="#">Schedule Call</a>
-                                            <a href="#">Join Newsletter</a>
-                                            <a href="#">Follow Updates</a>
-                                            <a href="#">Partnership</a>
-                                        </nav>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="footer-social" data-aos="fade-up" data-aos-delay="200">
-                <div class="row align-items-center">
-
-                    <div class="col-lg-6">
-                        <div class="newsletter-section">
-                            <h5>Stay Inspired</h5>
-                            <p>Subscribe to receive design insights and creative inspiration delivered monthly.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6">
-                        <div class="social-section">
-                            <div class="social-links">
-                                <a href="#" aria-label="Dribbble" class="social-link">
-                                    <i class="bi bi-dribbble"></i>
-                                    <span>Dribbble</span>
-                                </a>
-                                <a href="#" aria-label="Behance" class="social-link">
-                                    <i class="bi bi-behance"></i>
-                                    <span>Behance</span>
-                                </a>
-                                <a href="#" aria-label="Instagram" class="social-link">
-                                    <i class="bi bi-instagram"></i>
-                                    <span>Instagram</span>
-                                </a>
-                                <a href="#" aria-label="LinkedIn" class="social-link">
-                                    <i class="bi bi-linkedin"></i>
-                                    <span>LinkedIn</span>
-                                </a>
                             </div>
                         </div>
                     </div>
@@ -1275,38 +1392,24 @@
 
         </div>
 
-        <div class="footer-bottom">
+        <!-- Footer Bottom -->
+        <div class="footer-bottom border-top">
             <div class="container">
-                <div class="bottom-content" data-aos="fade-up" data-aos-delay="300">
-                    <div class="row align-items-center">
+                <div class="row gy-2 align-items-center text-center text-lg-start">
 
-                        <div class="col-lg-6">
-                            <div class="copyright">
-                                <p>© <span class="sitename">Landio</span>. All rights reserved.</p>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6">
-                            <div class="legal-links">
-                                <a href="#">Privacy Policy</a>
-                                <a href="#">Terms of Service</a>
-                                <a href="#">Cookie Policy</a>
-                                <div class="credits">
-                                    <!-- All the links in the footer should remain intact. -->
-                                    <!-- You can delete the links only if you've purchased the pro version. -->
-                                    <!-- Licensing information: https://bootstrapmade.com/license/ -->
-                                    <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-                                    Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-                                </div>
-                            </div>
-                        </div>
-
+                    <div class="col-lg-12">
+                        <p class="mb-0 small text-muted text-center">
+                            © <span class="fw-semibold text-dark">Rancang Web</span> 2025. All rights reserved.
+                        </p>
                     </div>
+
                 </div>
             </div>
         </div>
 
     </footer>
+
+
 
     <!-- Scroll Top -->
     <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
@@ -1317,6 +1420,10 @@
     <script src="{{ asset('template/php-email-form/validate.js') }} "></script>
     <script src="{{ asset('template/aos/aos.js') }} "></script>
     <script src="{{ asset('template/swiper/swiper-bundle.min.js') }} "></script>
+
+
+    {{-- ? swiper --}}
+    @vite('resources/js/app.js')
 
     <!-- Main JS File -->
     <script src="{{ asset('js/main.js') }} "></script>

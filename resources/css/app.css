@@ -1,0 +1,257 @@
+/* ? header image logo */
+.header .logo img {
+    width: 200px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: rgba(0, 0, 0, 0.5);
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(1px);
+    border-radius: 50%;
+    border: solid 1px rgb(35, 76, 106, 0.5);
+
+}
+
+/* efek hover */
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    color: #234C6A;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* posisi tengah vertikal */
+.swiper-button-prev,
+.swiper-button-next {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-weight: 900;
+    /* tebelin */
+    display: none !important;
+}
+
+/* jarak dari sisi kiri-kanan */
+.swiper-button-prev {
+    left: 20px !important;
+}
+
+.swiper-button-next {
+    right: 20px !important;
+}
+
+/* ? faq */
+/* FAQ Section */
+#faq {
+    background: #FDFEFE;
+    color: #fff;
+    padding: 100px 0;
+}
+
+.faq-title {
+    font-weight: 800;
+    font-size: 56px;
+    line-height: 1.1;
+    color: #234C6A;
+}
+
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.faq-item {
+    background: #14161a;
+    border-radius: 8px;
+    padding: 18px 24px !important;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-bottom: 10px !important;
+}
+
+.question-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.question {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 !important;
+}
+
+.arrow-wrapper {
+    font-size: 20px;
+    color: #234C6A;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .arrow-wrapper {
+    transform: rotate(45deg);
+}
+
+.answer {
+    display: none;
+    margin-top: 10px;
+    color: #ccc;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.faq-item.active .answer {
+    display: block;
+}
+
+@media (max-width: 991px) {
+    .faq-title {
+        text-align: center;
+        font-size: 42px;
+        margin-bottom: 30px;
+    }
+}
+
+.testimonial-card {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05) !important;
+    transition: box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10) !important;
+}
+
+/* ? portfolio */
+.card {
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    font-weight: 600;
+    color: #234C6A;
+}
+
+.modal-body {
+    padding: 34px;
+}
+
+.btn-close:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+
+/* Footer Styling */
+#footer {
+    color: #333;
+}
+
+#footer .footer-link {
+    color: #6c757d;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+#footer .footer-link:hover {
+    color: #234C6A;
+    transform: translateX(4px);
+}
+
+#footer .social-link {
+    color: #234C6A;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+#footer .social-link:hover {
+    color: #0d6efd;
+    transform: scale(1.1);
+}
+
+#footer .footer-bottom {
+    border-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+#footer .nav-column {
+    margin-bottom: 0 !important;
+}
+
+#footer .footer-nav-wrapper {
+    margin-top: 0 !important;
+}
+
+
+@media (max-width: 576px) {
+    #footer .brand-description {
+        font-size: 0.9rem;
+    }
+
+    #footer .footer-link {
+        font-size: 0.9rem;
+    }
+
+    #footer .footer-bottom {
+        padding-top: 1rem;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .header .logo img {
+        width: 140px;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        width: 30px;
+        height: 30px;
+        padding: 5px;
+    }
+
+    .swiper-button-prev {
+        left: 8px !important;
+    }
+
+    .swiper-button-next {
+        right: 8px !important;
+    }
+
+    #footer .brand-section,
+    #footer .footer-nav-wrapper,
+    #footer .footer-bottom {
+        text-align: center !important;
+    }
+
+    #footer .logo {
+        justify-content: center !important;
+    }
+
+    #footer .footer-nav {
+        align-items: center !important;
+    }
+
+    #footer .nav-column .d-flex {
+        justify-content: center !important;
+    }
+
+    #footer .nav-column {
+        margin-bottom: 1rem;
+    }
+
+    #footer .nav-column .centering {
+        text-align: center !important;
+    }
+
+}
