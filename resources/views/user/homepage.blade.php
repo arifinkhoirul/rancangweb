@@ -689,183 +689,61 @@
                     <div class="swiper testimonials-carousel">
                         <div class="swiper-wrapper">
 
-                            <!-- Card 1 -->
-                            <div class="swiper-slide testimonial-card" data-aos="zoom-in" data-aos-delay="200">
-                                <div class="rating">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                </div>
-                                <blockquote>
-                                    "The platform's intuitive design has streamlined our workflow and boosted team
-                                    productivity by 40%. The automation features are game-changing."
-                                </blockquote>
-                                <div class="user-profile">
-                                    <div class="avatar">
-                                        <img src="assets/img/person/person-f-12.webp" alt="User"
-                                            class="img-fluid">
+                            @forelse ($testimonials as $testimonial)
+                                <!-- Card 2 -->
+                                <div class="swiper-slide testimonial-card featured" data-aos="zoom-in"
+                                    data-aos-delay="300">
+                                    <div class="featured-badge">
+                                        <i class="bi bi-award-fill"></i>
+                                        <span>Top Review</span>
                                     </div>
-                                    <div class="user-info">
-                                        <h4>Sarah Williams</h4>
-                                        <span class="title">Product Manager</span>
-                                        <div class="company">TechFlow Inc.</div>
+                                    <div class="rating">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <blockquote>
+                                        {{ $testimonial->message }}
+                                    </blockquote>
+                                    <div class="user-profile">
+                                        <div class="avatar">
+                                            <img src="{{ asset('storage/' . $testimonial->image) }}" alt="User"
+                                                class="img-fluid">
+                                        </div>
+                                        <div class="user-info">
+                                            <h4>{{ $testimonial->individual_name }}</h4>
+                                            <span class="title">CEO &amp; Founder</span>
+                                            <div class="company">DataDrive Solutions</div>
+                                        </div>
                                     </div>
                                 </div>
+                            @empty
+                                <div>
+                                    <p>dta masih kosong</p>
+                                </div>
+                            @endforelse
+
+                            <!-- Tombol navigasi pakai Remix Icons -->
+                            <div class="swiper-button-prev custom-arrow">
+
+                            </div>
+                            <div class="swiper-button-next custom-arrow">
+
                             </div>
 
-                            <!-- Card 2 -->
-                            <div class="swiper-slide testimonial-card featured" data-aos="zoom-in"
-                                data-aos-delay="300">
-                                <div class="featured-badge">
-                                    <i class="bi bi-award-fill"></i>
-                                    <span>Top Review</span>
-                                </div>
-                                <div class="rating">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                </div>
-                                <blockquote>
-                                    "Outstanding customer support and feature-rich platform. The analytics dashboard
-                                    provides incredible insights that have transformed our decision-making process
-                                    completely."
-                                </blockquote>
-                                <div class="user-profile">
-                                    <div class="avatar">
-                                        <img src="{{ asset('image/person/person-m-11.webp') }}" alt="User"
-                                            class="img-fluid">
-                                    </div>
-                                    <div class="user-info">
-                                        <h4>Michael Chen</h4>
-                                        <span class="title">CEO &amp; Founder</span>
-                                        <div class="company">DataDrive Solutions</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Card 3 -->
-                            <div class="swiper-slide testimonial-card" data-aos="zoom-in" data-aos-delay="400">
-                                <div class="rating">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                </div>
-                                <blockquote>
-                                    "Seamless integration with our existing tools made the transition effortless. The
-                                    real-time collaboration features have enhanced our remote work capabilities."
-                                </blockquote>
-                                <div class="user-profile">
-                                    <div class="avatar">
-                                        <img src="assets/img/person/person-f-14.webp" alt="User"
-                                            class="img-fluid">
-                                    </div>
-                                    <div class="user-info">
-                                        <h4>Emma Rodriguez</h4>
-                                        <span class="title">Operations Director</span>
-                                        <div class="company">CloudSync Corp</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide testimonial-card" data-aos="zoom-in" data-aos-delay="400">
-                                <div class="rating">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                </div>
-                                <blockquote>
-                                    "Seamless integration with our existing tools made the transition effortless. The
-                                    real-time collaboration features have enhanced our remote work capabilities."
-                                </blockquote>
-                                <div class="user-profile">
-                                    <div class="avatar">
-                                        <img src="assets/img/person/person-f-14.webp" alt="User"
-                                            class="img-fluid">
-                                    </div>
-                                    <div class="user-info">
-                                        <h4>Emma Rodriguez</h4>
-                                        <span class="title">Operations Director</span>
-                                        <div class="company">CloudSync Corp</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide testimonial-card" data-aos="zoom-in" data-aos-delay="400">
-                                <div class="rating">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                </div>
-                                <blockquote>
-                                    "Seamless integration with our existing tools made the transition effortless. The
-                                    real-time collaboration features have enhanced our remote work capabilities."
-                                </blockquote>
-                                <div class="user-profile">
-                                    <div class="avatar">
-                                        <img src="assets/img/person/person-f-14.webp" alt="User"
-                                            class="img-fluid">
-                                    </div>
-                                    <div class="user-info">
-                                        <h4>Emma Rodriguez</h4>
-                                        <span class="title">Operations Director</span>
-                                        <div class="company">CloudSync Corp</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide testimonial-card" data-aos="zoom-in" data-aos-delay="400">
-                                <div class="rating">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                </div>
-                                <blockquote>
-                                    "Seamless integration with our existing tools made the transition effortless. The
-                                    real-time collaboration features have enhanced our remote work capabilities."
-                                </blockquote>
-                                <div class="user-profile">
-                                    <div class="avatar">
-                                        <img src="assets/img/person/person-f-14.webp" alt="User"
-                                            class="img-fluid">
-                                    </div>
-                                    <div class="user-info">
-                                        <h4>Emma Rodriguez</h4>
-                                        <span class="title">Operations Director</span>
-                                        <div class="company">CloudSync Corp</div>
-                                    </div>
-                                </div>
-                            </div>
 
                         </div>
-
-                        <!-- Tombol navigasi pakai Remix Icons -->
-                        <div class="swiper-button-prev custom-arrow">
-
-                        </div>
-                        <div class="swiper-button-next custom-arrow">
-
-                        </div>
-
-
                     </div>
+
+
+
+
+
+
+
                 </div>
-
-
-
-
-
-
-
-            </div>
 
         </section><!-- /Testimonials Section -->
 
@@ -898,7 +776,12 @@
                             text-overflow: ellipsis;
                             min-height: 60px;
                         ">
-                                    Website Karang Taruna Online adalah platform yang menjadi pusat informasi dan komunikasi bagi generasi muda di wilayah Ujung Harapan. Di sini, pengunjung bisa melihat data remaja, informasi pengurus, agenda kegiatan, serta dokumentasi acara sosial dan budaya. Website ini bertujuan untuk memudahkan partisipasi pemuda dalam kegiatan komunitas, mempererat silaturahmi antarwarga, dan menampilkan berbagai kegiatan kreatif dan positif bagi masyarakat.
+                                    Website Karang Taruna Online adalah platform yang menjadi pusat informasi dan
+                                    komunikasi bagi generasi muda di wilayah Ujung Harapan. Di sini, pengunjung bisa
+                                    melihat data remaja, informasi pengurus, agenda kegiatan, serta dokumentasi acara
+                                    sosial dan budaya. Website ini bertujuan untuk memudahkan partisipasi pemuda dalam
+                                    kegiatan komunitas, mempererat silaturahmi antarwarga, dan menampilkan berbagai
+                                    kegiatan kreatif dan positif bagi masyarakat.
                                 </p>
                             </div>
                         </div>
@@ -931,17 +814,22 @@
                     </div>
                 </div>
 
-                {{-- ? modal card 1--}}
+                {{-- ? modal card 1 --}}
                 <div class="modal fade" id="portfolioModal1" tabindex="-1" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered modal-lg">
                         <div class="modal-content border-0 rounded-4 ">
                             <div class="modal-body position-relative">
-                                <button type="button" class="btn-close position-absolute top-0 end-0" style="margin: 11px"
-                                    data-bs-dismiss="modal" aria-label="Close"></button>
+                                <button type="button" class="btn-close position-absolute top-0 end-0"
+                                    style="margin: 11px" data-bs-dismiss="modal" aria-label="Close"></button>
                                 <img src="{{ asset('image/portfolio/mc1.jpg') }}" class="img-fluid rounded mb-3"
                                     alt="...">
                                 <h4 class="fw-bold mb-2 fs-2">Karang Taruna</h4>
-                                <p class="text-muted"> Website Karang Taruna Online adalah platform yang menjadi pusat informasi dan komunikasi bagi generasi muda di wilayah Ujung Harapan. Di sini, pengunjung bisa melihat data remaja, informasi pengurus, agenda kegiatan, serta dokumentasi acara sosial dan budaya. Website ini bertujuan untuk memudahkan partisipasi pemuda dalam kegiatan komunitas, mempererat silaturahmi antarwarga, dan menampilkan berbagai kegiatan kreatif dan positif bagi masyarakat.</p>
+                                <p class="text-muted"> Website Karang Taruna Online adalah platform yang menjadi pusat
+                                    informasi dan komunikasi bagi generasi muda di wilayah Ujung Harapan. Di sini,
+                                    pengunjung bisa melihat data remaja, informasi pengurus, agenda kegiatan, serta
+                                    dokumentasi acara sosial dan budaya. Website ini bertujuan untuk memudahkan
+                                    partisipasi pemuda dalam kegiatan komunitas, mempererat silaturahmi antarwarga, dan
+                                    menampilkan berbagai kegiatan kreatif dan positif bagi masyarakat.</p>
                                 <p class="mt-3 fw-medium">
                                     Visit Link:
                                     <a href="https://karangtaruna.online/" target="_blank"
@@ -961,8 +849,8 @@
                     <div class="modal-dialog modal-dialog-centered modal-lg">
                         <div class="modal-content border-0 rounded-4 ">
                             <div class="modal-body position-relative">
-                                <button type="button" class="btn-close position-absolute top-0 end-0" style="margin: 11px"
-                                    data-bs-dismiss="modal" aria-label="Close"></button>
+                                <button type="button" class="btn-close position-absolute top-0 end-0"
+                                    style="margin: 11px" data-bs-dismiss="modal" aria-label="Close"></button>
                                 <img src="{{ asset('image/about/about-3.webp') }}" class="img-fluid rounded mb-3"
                                     alt="...">
                                 <h4 class="fw-bold mb-2 fs-2">Karang Taruna</h4>
@@ -1061,11 +949,19 @@
                             </div>
                             <div class="plan-features">
                                 <ul>
-                                    <li><i class="bi bi-check-circle-fill"></i> Donec quam felis ultricies</li>
-                                    <li><i class="bi bi-check-circle-fill"></i> Nam eget dui etiam rhoncus</li>
-                                    <li><i class="bi bi-check-circle-fill"></i> Maecenas tempus tellus</li>
-                                    <li><i class="bi bi-check-circle-fill"></i> Donec pede justo fringilla</li>
-                                    <li class="disabled"><i class="bi bi-x-circle-fill"></i> Cras dapibus vivamus</li>
+                                    @if ($dataPriceProfesional)
+                                        @foreach ($dataPriceProfesional->features as $dataProfesional)
+                                            @if ($dataProfesional->status === 'check')
+                                                <li><i class="bi bi-check-circle-fill"></i>
+                                                    {{ $dataProfesional->feature }}
+                                                </li>
+                                            @else
+                                                <li class="disabled"><i class="bi bi-x-circle-fill"></i>
+                                                    {{ $dataProfesional->feature }}
+                                                </li>
+                                            @endif
+                                        @endforeach
+                                    @endif
                                 </ul>
                             </div>
                             <div class="plan-cta">
@@ -1093,11 +989,19 @@
                             </div>
                             <div class="plan-features">
                                 <ul>
-                                    <li><i class="bi bi-check-circle-fill"></i> Etiam sit amet orci eget</li>
-                                    <li><i class="bi bi-check-circle-fill"></i> Pellentesque posuere vulputate</li>
-                                    <li><i class="bi bi-check-circle-fill"></i> Quisque rutrum aenean</li>
-                                    <li><i class="bi bi-check-circle-fill"></i> Fusce vulputate eleifend</li>
-                                    <li><i class="bi bi-check-circle-fill"></i> Phasellus viverra nulla</li>
+                                    @if ($dataPriceEnterprice)
+                                        @foreach ($dataPriceEnterprice->features as $dataEnterprice)
+                                            @if ($dataEnterprice->status === 'check')
+                                                <li><i class="bi bi-check-circle-fill"></i>
+                                                    {{ $dataEnterprice->feature }}
+                                                </li>
+                                            @else
+                                                <li class="disabled"><i class="bi bi-x-circle-fill"></i>
+                                                    {{ $dataEnterprice->feature }}
+                                                </li>
+                                            @endif
+                                        @endforeach
+                                    @endif
                                 </ul>
                             </div>
                             <div class="plan-cta">
@@ -1124,58 +1028,31 @@
                     <div class="col-lg-7 col-md-12">
                         <div class="faq-container">
 
-                            <!-- FAQ Item -->
-                            <div class="faq-item">
-                                <div class="question-wrapper">
-                                    <h3 class="question">Apa itu Rancang Web?</h3>
-                                    <div class="arrow-wrapper">
-                                        <i class="bi bi-plus-lg"></i>
+                            @forelse ($questions as $question)
+                                <!-- FAQ Item -->
+                                <div class="faq-item">
+                                    <div class="question-wrapper">
+                                        <h3 class="question">{{ $question->question }}</h3>
+                                        <div class="arrow-wrapper">
+                                            <i class="bi bi-plus-lg"></i>
+                                        </div>
+                                    </div>
+                                    <div class="answer">
+                                        <p>{{ $question->answer }}</p>
                                     </div>
                                 </div>
-                                <div class="answer">
-                                    <p>Rancang Web adalah layanan pembuatan landing page dan admin dinamis yang bikin
-                                        website kamu tampil keren dan mudah diatur.</p>
+                            @empty
+                                <div
+                                    class="flex flex-col items-center justify-center py-16 text-center bg-gray-50 dark:bg-gray-900 rounded-xl shadow-inner">
+                                    <img src="{{ asset('image/services/question.svg') }}" width="300" height="300" alt="Empty"
+                                        class="w-40 mb-6 opacity-80">
+                                    <h3 class="text-xl font-semibold text-gray-700 dark:text-gray-200 mb-2">Belum Ada
+                                        Data Testimonial</h3>
+                                    <p class="text-gray-500 dark:text-gray-400 text-sm">Tambahkan testimonial baru
+                                        untuk mengisi bagian ini.</p>
                                 </div>
-                            </div>
+                            @endforelse
 
-                            <div class="faq-item">
-                                <div class="question-wrapper">
-                                    <h3 class="question">Apakah landing page bisa dikustom sesuai keinginan saya?</h3>
-                                    <div class="arrow-wrapper">
-                                        <i class="bi bi-plus-lg"></i>
-                                    </div>
-                                </div>
-                                <div class="answer">
-                                    <p>Tentu! Semua desain bisa disesuaikan dengan warna, font, dan style yang kamu
-                                        suka, supaya website tetap personal dan menarik.</p>
-                                </div>
-                            </div>
-
-                            <div class="faq-item">
-                                <div class="question-wrapper">
-                                    <h3 class="question">Apakah admin panel mudah dipakai?</h3>
-                                    <div class="arrow-wrapper">
-                                        <i class="bi bi-plus-lg"></i>
-                                    </div>
-                                </div>
-                                <div class="answer">
-                                    <p>Ya, admin kami sangat user-friendly, jadi kamu bisa update konten, produk, atau
-                                        info lain tanpa ribet dan tanpa harus jago teknis.</p>
-                                </div>
-                            </div>
-
-                            <div class="faq-item">
-                                <div class="question-wrapper">
-                                    <h3 class="question">Berapa lama pembuatan website biasanya?</h3>
-                                    <div class="arrow-wrapper">
-                                        <i class="bi bi-plus-lg"></i>
-                                    </div>
-                                </div>
-                                <div class="answer">
-                                    <p>Biasanya 3–7 hari kerja untuk landing page standar. Kalau fiturnya lebih
-                                        kompleks, waktunya bisa sedikit lebih lama.</p>
-                                </div>
-                            </div>
 
                         </div>
                     </div>
